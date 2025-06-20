@@ -98,6 +98,10 @@ th {
 
 ul {
   padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap; /* para quebrar linha se não couber */
+  gap: 10px;        /* espaço entre os itens */
+  padding: 0;
 }
 
 li {
