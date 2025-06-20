@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Analisador Léxico</title>
+  <!-- Importa o CSS externo para estilizar a interface -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Analisador Léxico</h1>
+
+    <!-- Seção para adicionar palavras ao AFD -->
+    <div class="secao">
+      <h2>Adicionar palavras</h2>
+      <input type="text" id="entrada-palavra" placeholder="Digite uma palavra...">
+      <button onclick="adicionarPalavra()">➕ ADICIONAR</button>
+      <ul id="lista-palavras"></ul> <!-- Lista que exibe as palavras adicionadas -->
+      <button class="limpar-btn" onclick="limparPalavras()">🗑️ LIMPAR TODAS AS PALAVRAS</button>
+    </div>
+
+    <!-- Seção para validar palavras digitadas com base no AFD -->
+    <div class="secao">
+      <h2>Validar palavras</h2>
+      <input type="text" id="campo-validar" placeholder="Digite para validar...">
+      <div id="resultado-validacao" class="resultado-validacao"></div>
+      <p><strong>Reconhecidas:</strong></p>
+      <ul id="validadas"></ul> <!-- Lista de palavras reconhecidas pelo AFD -->
+      <p><strong>Rejeitadas:</strong></p>
+      <ul id="rejeitadas"></ul> <!-- Lista de palavras rejeitadas pelo AFD -->
+      <p><strong>Caminho:</strong> <span id="caminho-resultado"></span></p> <!-- Exibe o caminho dos estados percorridos -->
+    </div>
+
+    <!-- Seção que exibe a tabela de transições do AFD -->
+    <div class="secao">
+      <h2>Tabela de estados</h2>
+      <div style="overflow-x:auto;">
+        <table id="tabela-estados"></table> <!-- Tabela gerada dinamicamente com os estados e transições -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Importa o script JS responsável pela lógica do AFD -->
+  <script src="js/afd.js"></script>
+</body>
+</html>

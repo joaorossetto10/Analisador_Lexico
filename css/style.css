@@ -1,0 +1,150 @@
+/*
+  Folha de estilo do Analisador Léxico
+  Define as cores, espaçamentos, bordas e classes que compõem o visual da aplicação.
+*/
+
+:root {
+  --verde: #148a0a; /* Cor principal dos botões e título */
+  --preto: #222;     /* Cor de fundo escuro */
+  --cinza-claro: #f5f5f5; /* Fundo das seções */
+  --vermelho: #d50000; /* Cor para remover palavras */
+  --azul: #d0e6ff; /* Cor não utilizada neste projeto */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: white;
+}
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  background-color: var(--verde);
+  color: white;
+  padding: 18px 30px;
+  font-size: 26px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+}
+
+.secao {
+  background-color: var(--cinza-claro);
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: var(--verde);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 5px 5px 5px 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.limpar-btn {
+  background-color: var(--preto); /* Botão de limpar com fundo escuro */
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+
+th {
+  background-color: #e9e9e9; /* Cabeçalho da tabela */
+}
+
+.cell-final-ok {
+  background-color: #c0ffc0 !important; /* Célula marcada como válida */
+}
+
+.cell-final-erro {
+  background-color: #ffc0c0 !important; /* Célula marcada como erro */
+}
+
+ul {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 300px;
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+li.reconhecida {
+  background-color: #d8ffd8; /* Fundo verde para reconhecidas */
+}
+
+li.rejeitada {
+  background-color: #ffd8d8; /* Fundo vermelho para rejeitadas */
+}
+
+li.adicionada {
+  background-color: #e0e0e0; /* Fundo cinza escuro para palavras adicionadas */
+}
+
+li button {
+  background-color: transparent;
+  color: var(--vermelho);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+li button:hover {
+  color: #a00000;
+}
+
+.resultado-validacao {
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.resultado-validacao.ok {
+  color: green; /* Palavra reconhecida */
+}
+
+.resultado-validacao.erro {
+  color: red; /* Palavra rejeitada */
+}
